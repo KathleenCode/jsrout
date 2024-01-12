@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,200&display=swap');
+
+.active {
+    display: block;
+}
+
+#home.active {
+    display: block;
+    background-color: #A94438;
+    color: #FBF9F1;
+    border-radius: 11px;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    border-right: 5px dotted #B19470;
+}
+
+#home.active img {
+    height: 330px;
+    width: 320px;
+    border-radius: 30%;
+    margin-bottom: 1rem;
+}
+
+#contact.active img {
+    height: 330px;
+    width: 320px;
+    border-radius: 39%;
+    margin-bottom: 1rem;
+}
+
+#blog.active img {
+    height: 330px;
+    width: 320px;
+    border-radius: 70%;
+    margin-bottom: 2rem;
+}
+
+#home p, #contact p, #blog p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    padding: 1rem;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#contact.active {
+    display: block;
+    background-color: #D24545;
+    color: #F8F4EC;
+    border-radius: 15px;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    border-right: 5px dotted #B19470;
+}
+
+#blog.active {
+    display: block;
+    background-color: #4F6F52;
+    color: #FAE7F3;
+    border-radius: 17px;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    border-right: 5px dotted #B19470;
+}
+
+#home {
+    display: none;
+}
+
+#contact {
+    display: none;
+}
+
+#blog {
+    display: none;
+}
+
+body {
+    background-color: #3E3232;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 7rem;
+}
+
+.set span {
+    color: #EBD9B4;
+    background-color: #3E3232;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-style: italic;
+}
+
+.set nav ul {
+    display: flex;
+    justify-content: end;
+    gap: 5rem;
+}
+
+.set ul li {
+    color: #E4DEBE;
+    font-size: 1.5rem;
+    list-style: square;
+    cursor: pointer;
+}
+
+#ham {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #home.active img, 
+    #contact.active img, 
+    #blog.active img {
+        height: 230px;
+        width: 220px;
+    }
+    
+    #ham {
+        display: block;
+    }
+
+    .set {
+        position: relative;
+    }
+
+    .set nav ul {
+        display: none;
+    }
+
+    #ham::before,
+    #ham::after,
+    #ham input {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 5px;
+        background-color: #F6B17A;
+        transform-origin: left center;
+    }
+
+    #ham input {
+        appearance: none;
+    }
+
+    #ham:has(input:checked)::before {
+        rotate: 45deg;
+        width: 30px;
+    }
+
+    #ham:has(input:checked)::after {
+        rotate: -45deg;
+        width: 30px;
+    }
+    #ham input:checked {
+        opacity: 0;
+    }
+
+    #ham:has(input:checked) + nav ul {
+        display: block;
+        position: absolute;
+        top: 3rem;
+        left: 14rem;
+        right: 4rem;
+        border-bottom: 3px dotted #B19470;
+        border-radius: 11px;
+        background-color: #76453B;
+    }
+}
+
+@media only screen and (min-width: 603px) and (max-width: 1100px) {
+    #home.active img, 
+    #contact.active img, 
+    #blog.active img {
+        height: 250px;
+        width: 230px;
+    }
+    
+    #ham {
+        display: block;
+    }
+
+    .set {
+        position: relative;
+    }
+
+    .set nav ul {
+        display: none;
+    }
+
+    #ham::before,
+    #ham::after,
+    #ham input {
+        content: "";
+        display: block;
+        width: 70px;
+        height: 8px;
+        background-color: #F6B17A;
+        transform-origin: left center;
+    }
+
+    #ham input {
+        appearance: none;
+    }
+
+    #ham:has(input:checked)::before {
+        rotate: 45deg;
+        width: 40px;
+    }
+
+    #ham:has(input:checked)::after {
+        rotate: -45deg;
+        width: 40px;
+    }
+    #ham input:checked {
+        opacity: 0;
+    }
+
+    #ham:has(input:checked) + nav ul {
+        display: block;
+        position: absolute;
+        top: 4rem;
+        left: 20rem;
+        right: 5rem;
+        border-bottom: 3px dotted #F6B17A;
+        border-radius: 11px;
+        background-color: #76453B;
+    }
+}
